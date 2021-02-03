@@ -1,0 +1,27 @@
+{% extends "layout.html.twig" %}
+{% block main %}
+
+
+<h1>Test Twig
+</h1>
+{%  set yo ="blablabla" %}
+
+
+<p>{{ yo }}</p>
+    <p>{{ content |striptags}}</p>
+
+{% set colors = ['red', 'green', 'blue','brown','black'] %}
+{% set num = 1235465468.3546565 %}
+    <p>{{ num }}</p>
+
+<p>{{ num |number_format(2, ',')}}</p>
+<p>{{ num |round()}}</p>
+<ul>
+    {% for color in colors %}
+    {% if color != 'blue' %}
+
+    <li>{{ color }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+<h1>Coucou !!</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+    accusantium commodi cupiditate distinctio, dolore eius enim expedita fuga
+    fugit illum ipsam ipsum laborum, libero maiores placeat repudiandae sed sunt voluptatem!</p>
+{% for serie in series%}
+<p>{{ loop.index }} : {{ serie }}</p>
+{% endfor %}
+
+
+
+{% endblock %}
+
+
+
+{% block title %} {{ title}} {% endblock %}

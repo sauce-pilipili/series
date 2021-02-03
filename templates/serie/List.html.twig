@@ -1,0 +1,15 @@
+{% extends'layout.html.twig' %}
+
+{% block main %}
+<h2> Our Series!</h2>
+    {% for serie in series%}
+    <div class="serie">
+       <a href="{{path('serie_detail',{'id':serie.id})}}">{{ serie.name }}</a>
+
+    </div>
+
+    {% endfor %}
+
+{% endblock %}
+
+{% block title %}Our series !|{{ parent() }}{% endblock %}

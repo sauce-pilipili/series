@@ -1,0 +1,14 @@
+{% extends'layout.html.twig' %}
+
+{% block main %}
+    <h2> Create Serie!</h2>
+
+    {# mis en service pour test validation serveur en --dev #}
+    {{ form_start(serieForm, {'attr': {'novalidate' : 'novalidate'}}) }}
+    {{ form_widget(serieForm) }}
+    <button type="submit">send</button>
+    {{ form_end(serieForm) }}
+
+{% endblock %}
+
+{% block title %}Our series! |{{ parent() }}{% endblock %}
